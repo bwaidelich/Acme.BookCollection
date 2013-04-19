@@ -9,6 +9,9 @@ demonstrates following features:
 * Creating simple Backend Modules
 * Custom Page Nodes (each book is a page node in the TYPO3CR)
 
+**Note:** This is a package we created in the `Neos workshop <http://inspiringflow.de/workshops/workshop2>`_ at "Inspiring Flow".
+It is based on Roberts Flow Package `RobertLemke.Example.Bookshop <https://github.com/robertlemke/RobertLemke.Example.Bookshop>`_ 
+
 ============
 Installation
 ============
