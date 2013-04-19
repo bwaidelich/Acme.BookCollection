@@ -1,0 +1,66 @@
+include: resource://Acme.BookCollection/Private/TypoScripts/Library/ContentElements.ts2
+
+/**
+ * Root TypoScript template for the book collection Site
+ */
+page = Page
+
+page {
+
+	/**
+	 * Load CSS files that are referenced in a section called "stylesheets" in the "Default.html" template
+	 */
+	headerData {
+		stylesheets = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Acme.BookCollection/Private/Templates/Page/Default.html'
+			sectionName = 'stylesheets'
+		}
+	}
+
+	/**
+	 * Set the default body template and define TypoScript sections & parts
+	 */
+	body {
+		templatePath = 'resource://Acme.BookCollection/Private/Templates/Page/Default.html'
+		sectionName = 'body'
+
+		/**
+		 * Define TypoScript objects that will be available underneath "parts/*"
+		 */
+		parts {
+			menu = Menu
+			subMenu = Menu {
+					// override the template of the sub navigation
+				templatePath = 'resource://Acme.BookCollection/Private/Templates/TypoScriptObjects/SubMenu.html'
+				entryLevel = 2
+			}
+		}
+
+		/**
+		 * These are your content areas, you can define as many as you want, just name them and the nodePath.
+		 */
+		sections {
+			main = Section {
+				nodePath = 'main'
+			}
+			secondary = Section {
+				nodePath = 'secondary'
+			}
+		}
+	}
+}
+
+/**
+ * Define a new page type "bookPage" that replaces the "main" section with a custom ContentElement "Book" (defined in ContentElements.ts2)
+ */
+bookPage < page {
+	body.sections.main = Acme.BookCollection:Book
+}
+
+/**
+ * Use "bookPage" instead of "page" as entry point, if the current node is of type "Book"
+ */
+root.bookMatcher {
+	condition = ${q(node).is('[instanceof Acme.BookCollection:Book]')}
+	renderPath = 'bookPage'
+}

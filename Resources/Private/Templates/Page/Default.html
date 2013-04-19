@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--{namespace ts=TYPO3\TypoScript\ViewHelpers}-->
+	<meta charset="utf-8">
+	<title>Default Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<f:section name="stylesheets">
+		<link href="../../../Public/Styles/Bootstrap.css" rel="stylesheet">
+		<link href="../../../Public/Styles/Custom.css" rel="stylesheet">
+		<link href="../../../Public/Styles/Bootstrap-responsive.css" rel="stylesheet">
+	</f:section>
+</head>
+
+<body>
+
+<f:section name="body">
+
+	<div id="navbar" class="t3-reloadable-content navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">Book Collection</a>
+
+				<div class="nav-collapse collapse">
+					<ts:renderTypoScript path="parts/menu">
+						<ul class="nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</ts:renderTypoScript>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="container" class="t3-reloadable-content container-fluid">
+		<div class="row-fluid">
+			<div class="span3">
+				<ts:renderTypoScript path="parts/subMenu">
+					<div class="well sidebar-nav">
+						<ul class="nav nav-list">
+							<li class="active"><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</div>
+				</ts:renderTypoScript>
+				<div class="secondary-content">
+					<ts:renderTypoScript path="sections/secondary">
+						<p>This is some secondary content</p>
+					</ts:renderTypoScript>
+				</div>
+			</div>
+			<div class="span9">
+
+				<ts:renderTypoScript path="sections/main">
+
+					<div class="hero-unit">
+						<h1>Hello, world!</h1>
+						<p>This is a template for a simple marketing or informational website. It includes a large callout
+							called the hero unit and three supporting pieces of content. Use it as a starting point to create
+							something more unique.</p>
+						<p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+					</div>
+					<div class="row-fluid">
+						<div class="span4">
+							<h2>Heading</h2>
+							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+								mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+								magna mollis euismod. Donec sed odio dui. </p>
+							<p><a class="btn" href="#">View details &raquo;</a></p>
+						</div>
+						<div class="span4">
+							<h2>Heading</h2>
+							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+								mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+								magna mollis euismod. Donec sed odio dui. </p>
+							<p><a class="btn" href="#">View details &raquo;</a></p>
+						</div>
+						<div class="span4">
+							<h2>Heading</h2>
+							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+								mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+								magna mollis euismod. Donec sed odio dui. </p>
+							<p><a class="btn" href="#">View details &raquo;</a></p>
+						</div>
+					</div>
+
+				</ts:renderTypoScript>
+
+			</div>
+		</div>
+		<hr />
+		<footer>
+			<p>&copy; Powered by <a href="http://neos.typo3.org">TYPO3 Neos</a></p>
+		</footer>
+	</div>
+
+</f:section>
+
+</body>
+</html>

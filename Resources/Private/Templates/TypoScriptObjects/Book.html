@@ -1,0 +1,29 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace t=TYPO3\Neos\ViewHelpers}
+<t:contentElement node="{node}">
+	<div class="row-fluid">
+		<div class="span9">
+			<h1><t:contentElement.editable property="title">{title -> f:format.raw()}</t:contentElement.editable></h1>
+			<ts:renderTypoScript path="description" />
+			<p />
+			<table class="table table-bordered table-striped">
+				<tr>
+					<th>Title</th>
+					<td>{title}</td>
+				</tr>
+				<tr>
+					<th>ISBN</th>
+					<td>{isbn}</td>
+				</tr>
+				<tr>
+					<th>Publisher</th>
+					<td>{publisher}</td>
+				</tr>
+				<tr>
+					<th>Authors</th>
+					<td>{authors}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</t:contentElement>

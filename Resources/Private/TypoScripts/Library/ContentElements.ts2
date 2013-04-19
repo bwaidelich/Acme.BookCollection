@@ -1,0 +1,43 @@
+/**
+ * HeroUnit Content Element
+ * A hero unit is a custom div that is defined by Twitter bootstrap, see http://twitter.github.io/bootstrap/components.html#typography)
+ */
+prototype(Acme.BookCollection:HeroUnit) < prototype(TYPO3.TypoScript:Template) {
+		// This CE has a custom template...
+	templatePath = 'resource://Acme.BookCollection/Private/Templates/TypoScriptObjects/HeroUnit.html'
+
+		// ..and a section called "content" that can contain arbitrary Content Elements
+	content = TYPO3.Neos.NodeTypes:Section {
+		nodePath = 'content'
+	}
+}
+
+/**
+ * Book Content Element
+ * A simple CE that will be used to render details of a book in the "books/*" pages
+ */
+prototype(Acme.BookCollection:Book) < prototype(TYPO3.TypoScript:Template) {
+	templatePath = 'resource://Acme.BookCollection/Private/Templates/TypoScriptObjects/Book.html'
+
+		// copy book node properties for easier usage in the Fluid template
+	title = ${q(node).property('title')}
+	isbn = ${q(node).property('isbn')}
+	publisher = ${q(node).property('publisher')}
+	authors = ${q(node).property('authors')}
+
+		// and a section called "description" that can contain arbitrary Content Elements
+	description = TYPO3.Neos.NodeTypes:Section {
+		nodePath = 'description'
+	}
+}
+
+/**
+ * BookList Content Element
+ * A CE renders all "Book" pages
+ */
+prototype(Acme.BookCollection:BookList) < prototype(TYPO3.TypoScript:Template) {
+	templatePath = 'resource://Acme.BookCollection/Private/Templates/TypoScriptObjects/BookList.html'
+
+		// FlowQuery that retrieves all "Book" pages inside the parent page of the current node
+	bookNodes = ${q(node).parents('[instanceof TYPO3.Neos.NodeTypes:Folder]').children('[instanceof Acme.BookCollection:Book]')}
+}

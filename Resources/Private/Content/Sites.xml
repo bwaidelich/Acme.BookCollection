@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<site nodeName="bookcollection">
+		<properties>
+			<name>Book Collection</name>
+			<state>1</state>
+			<siteResourcesPackageKey>Acme.BookCollection</siteResourcesPackageKey>
+		</properties>
+		<node identifier="7c069a15-bc38-4fa5-8972-edc317446f43" type="TYPO3.Neos.NodeTypes:Page" nodeName="homepage" locale="">
+			<properties>
+				<title>Home</title>
+			</properties>
+			<node identifier="125db6c5-3e95-48cb-a3e3-13d5dd85d55e" type="TYPO3.Neos.NodeTypes:Section" nodeName="main" locale="">
+				<node identifier="f297fc75-1d3f-45bd-8d18-fa5fce11ae5d" type="Acme.BookCollection:HeroUnit" nodeName="node517000eae8058" locale="">
+					<node identifier="2bfee66a-e234-4759-96f9-d8d3efdfdcab" type="TYPO3.Neos.NodeTypes:Section" nodeName="content" locale="">
+						<node identifier="2158f6d5-15a3-43b6-83c1-23f7cf667972" type="TYPO3.Neos.NodeTypes:Headline" nodeName="node51700119970fa" locale="">
+							<properties>
+								<title><![CDATA[<h1>Herzlich Willkommen</h1>]]></title>
+							</properties>
+						</node>
+						<node identifier="f1e5e8f5-8e92-48eb-899e-6f8945fd34c7" type="TYPO3.Neos.NodeTypes:Text" nodeName="node516fcb4c46bb3" locale="">
+							<properties>
+								<text>
+									<![CDATA[<p><br></p><p>Verwende das "Books" Submodul im "Management" Modul, um Bücher anzulegen</p><p><br></p>]]></text>
+							</properties>
+						</node>
+					</node>
+					<node identifier="45cbe222-fffc-4544-aa0e-77aa71fe7c36" type="TYPO3.Neos.NodeTypes:Headline" nodeName="node516fcb3bb6dae" locale="">
+						<properties>
+							<title><![CDATA[<h1>Willkommen bei meiner Büchersammlung</h1>]]></title>
+						</properties>
+					</node>
+				</node>
+			</node>
+			<node identifier="d694ba3b-effb-4d93-96d7-43a28d77de14" type="TYPO3.Neos.NodeTypes:Section" nodeName="secondary" locale="">
+				<node identifier="adf1f1ea-9281-44d0-8039-d74f3c434311" type="TYPO3.Neos.NodeTypes:Headline" nodeName="node51701654dd430" locale="">
+					<properties>
+						<title><![CDATA[<h2>Sidebar</h2>]]></title>
+					</properties>
+				</node>
+				<node identifier="15d5b366-786b-4e3b-a7f4-2ceac2ca157b" type="TYPO3.Neos.NodeTypes:Text" nodeName="node5170166909c7f" locale="">
+					<properties>
+						<text><![CDATA[<p>Das ist die Section "secondary"</p>]]></text>
+					</properties>
+				</node>
+			</node>
+		</node>
+		<node identifier="a0a303ff-2f1d-4209-8e27-f21400330034" type="TYPO3.Neos.NodeTypes:Page" nodeName="books" locale="">
+			<properties>
+				<title>Books</title>
+			</properties>
+			<node identifier="b25b7898-df62-4835-b92c-f9416b54ad65" type="TYPO3.Neos.NodeTypes:Section" nodeName="main" locale="">
+				<node identifier="50ebd242-30df-4a68-a300-c4b3b42d919b" type="TYPO3.Neos.NodeTypes:Headline" nodeName="node516fcb63037a9" locale="">
+					<properties>
+						<title><![CDATA[<h1>Bücher</h1>]]></title>
+					</properties>
+				</node>
+				<node identifier="9e16487d-57d9-4003-934c-3e7d264e5d7e" type="Acme.BookCollection:BookList" nodeName="node516ffb123df56" locale=""/>
+			</node>
+			<node identifier="f4820d46-d66d-458a-8d73-1790c319ba22" type="Acme.BookCollection:Book" nodeName="all-about-coffee" locale="">
+				<properties>
+					<title>All About Coffee</title>
+					<isbn>1174673230</isbn>
+					<publisher>Nabu Press</publisher>
+					<authors>William Harrison Ukers,</authors>
+				</properties>
+				<node identifier="c5df2dd5-f98d-44d0-a6f5-4a598ecd2f20" type="TYPO3.Neos.NodeTypes:Section" nodeName="description" locale="">
+					<node identifier="362995af-928c-4e8b-baf7-5a3f59c88b4e" type="TYPO3.Neos.NodeTypes:Text" nodeName="description-text" locale="">
+						<properties>
+							<text>This is an EXACT reproduction of a book published before 1923. This IS NOT an OCR'd
+								book with strange characters, introduced typographical errors, and jumbled words. This
+								book may have occasional imperfections such as missing or blurred pages, poor pictures,
+								errant marks,sdfsf etc. that were either part of the original artifact, or were
+								introduced by the scanning process. We believe this work is culturally important, and
+								despite the imperfections, have elected to bring it back into print as part of our
+								continuing commitment to the preservation of printed works worldwide. We appreciate your
+								understanding of the imperfections in the preservation process, and hope you enjoy this
+								valuable book.
+							</text>
+						</properties>
+					</node>
+				</node>
+				<node identifier="b9e9322b-98f6-4658-82d0-97a2977c632c" type="TYPO3.Neos.NodeTypes:Section" nodeName="main" locale=""/>
+				<node identifier="0cd58af4-de0b-47ed-a9a5-5515b58ef950" type="TYPO3.Neos.NodeTypes:Section" nodeName="secondary" locale="">
+					<node identifier="143d4b1c-d68e-40fc-91b1-bfc076ebf009" type="TYPO3.Neos.NodeTypes:Text" nodeName="node5170e8d8f0e40" locale="">
+						<properties>
+							<text>
+								<![CDATA[<h4><b>cof·fee</b>&nbsp;<i>\ˈkȯ-fē, ˈkä-\</i></h4><p><span class="ssens" style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px;">a beverage made by percolation, infusion, or decoction from the roasted and ground seeds of a coffee plant</span></p>]]></text>
+						</properties>
+					</node>
+				</node>
+			</node>
+			<node identifier="2c4d1d42-ac58-429e-b0b3-224fb104084a" type="Acme.BookCollection:Book" nodeName="the-beer-book" locale="">
+				<properties>
+					<title>The beer book</title>
+					<isbn>0756639824</isbn>
+					<publisher>New York, NY : DK Pub., 2008.</publisher>
+					<authors>with contributions from Tim Hampson... [et al.]</authors>
+				</properties>
+				<node identifier="4b06fe8e-df55-449f-983c-70087a79f315" type="TYPO3.Neos.NodeTypes:Section" nodeName="description" locale="">
+					<node identifier="29d0e5b4-6218-4a93-ae3f-ea4eaee3c8ab" type="TYPO3.Neos.NodeTypes:Text" nodeName="description-text" locale="">
+						<properties>
+							<text>A book all about beer.</text>
+						</properties>
+					</node>
+				</node>
+				<node identifier="f207d38a-d9db-4c2e-81ef-3ae828f3cd50" type="TYPO3.Neos.NodeTypes:Section" nodeName="secondary" locale=""/>
+			</node>
+		</node>
+	</site>
+</root>

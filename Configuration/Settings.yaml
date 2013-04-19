@@ -1,0 +1,13 @@
+# define a new module "books" as submodule of "management"
+TYPO3:
+  Neos:
+    modules:
+      'management':
+        submodules:
+          'books':
+            label: 'Books'
+            controller: 'Acme\BookCollection\Controller\Module\BookController'
+            description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+            icon: 'resource://TYPO3.Neos/Public/Images/Icons/Orange/box_icon-24.png'
+            # define the parent root node for new "book pages". "booksRootNodePath" is a custom key that can be accessed in the module controller via $this->moduleConfiguration
+            booksRootNodePath: '/sites/bookcollection/books'

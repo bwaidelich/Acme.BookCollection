@@ -1,0 +1,15 @@
+{namespace t=TYPO3\Neos\ViewHelpers}
+<t:contentElement node="{node}">
+	<ul class="thumbnails">
+		<f:for each="{bookNodes}" as="bookNode">
+			<li class="span3">
+				<div class="thumbnail">
+					<div class="caption">
+						<h5><t:link.node node="{bookNode}">{bookNode.properties.title}</t:link.node></h5>
+						<p>{bookNode.properties.authors}</p>
+					</div>
+				</div>
+			</li>
+		</f:for>
+	</ul>
+</t:contentElement>

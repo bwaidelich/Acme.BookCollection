@@ -1,0 +1,14 @@
+{
+    "name": "acme/bookcollection",
+    "type": "typo3-flow-site",
+    "description": null,
+    "version": null,
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme\\BookCollection": "Classes"
+        }
+    }
+}

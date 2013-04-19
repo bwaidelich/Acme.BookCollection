@@ -1,0 +1,32 @@
+'Acme.BookCollection:HeroUnit':
+  superTypes: ['TYPO3.Neos.NodeTypes:ContentObject']
+  ui:
+    label: 'Hero'
+    group: 'General'
+  childNodes:
+    'content':
+      type: 'TYPO3.Neos.NodeTypes:Section'
+
+'Acme.BookCollection:Book':
+  superTypes: ['TYPO3.Neos.NodeTypes:Page']
+  label: 'Book'
+  childNodes:
+    'description':
+      type: 'TYPO3.Neos.NodeTypes:Section'
+  properties:
+    'isbn':
+      type: string
+      ui:
+        label: 'ISBN'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'page'
+
+'Acme.BookCollection:BookList':
+  superTypes: ['TYPO3.Neos.NodeTypes:ContentObject']
+  ui:
+    label: 'Book list'
+    group: 'General'
+    icon:
+      light: 'Images/Icons/White/book_side_icon-16.png'
+      dark: 'Images/Icons/Black/book_side_icon-16.png'

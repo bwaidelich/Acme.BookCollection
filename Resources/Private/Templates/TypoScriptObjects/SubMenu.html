@@ -1,0 +1,30 @@
+{namespace t=TYPO3\Neos\ViewHelpers}
+<t:contentElement.notEditable>
+	<f:if condition="{items}">
+		<f:render section="itemList" arguments="{items: items}" />
+	</f:if>
+</t:contentElement.notEditable>
+<f:section name="itemList">
+	<div class="well sidebar-nav">
+		<ul class="nav nav-list">
+			<f:for each="{items}" as="item">
+				<li class="{item.state}">
+					<t:link.node node="{item.node}">{item.label}</t:link.node>
+					<f:if condition="{item.subItems}">
+						<f:render section="subList" arguments="{items: item.subItems}" />
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</div>
+</f:section>
+
+<f:section name="subList">
+	<ul>
+		<f:for each="{items}" as="item">
+			<li class="{item.state}">
+				<t:link.node node="{item.node}">{item.label}</t:link.node>
+			</li>
+		</f:for>
+	</ul>
+</f:section>
